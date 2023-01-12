@@ -15,6 +15,7 @@ public class Rectangle extends Polygon {
     private int radius;
     private int rotation = 0;
     private boolean isPassable = true;
+    public int isFuel = 1;
 
     public Rectangle(Point center, int radius, int cost) {
         npoints = SIDES; // количество вершин
@@ -125,7 +126,8 @@ public class Rectangle extends Polygon {
         //g.setStroke(tmpS);
         g.drawImage(img, null, x, y);
 
-        //g.setColor(Color.BLUE);
+        g.setColor(Color.BLUE);
+        //g.setFont(new Font("Monospaced", Font.ITALIC, 7));
         //g.drawString(String.valueOf(id), center.x, center.y);
     }
 

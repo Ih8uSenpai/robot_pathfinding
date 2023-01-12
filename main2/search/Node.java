@@ -5,7 +5,6 @@ import java.util.List;
 
 // класс, описывающий вершину графа
 public class Node implements Comparable<Node> {
-    private static int idCounter = 0;
     public Rectangle rect;
     public Node parent = null;
     public List<Edge> neighbors;
@@ -15,8 +14,7 @@ public class Node implements Comparable<Node> {
     public boolean opened = false;
     public boolean closed = false;
 
-    Node(double h, Rectangle rect){
-        this.h = h;
+    Node(Rectangle rect){
         this.rect = rect;
         this.neighbors = new ArrayList<>();
     }
